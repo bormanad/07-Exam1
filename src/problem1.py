@@ -135,12 +135,12 @@ def run_test_problem1b():
 
 
 def problem1b(point, win, width, height, color):
-    rg.RoseWindow = win
-
-
-
-
-
+    ellipse = rg.Ellipse(width, height)
+    ellipse.color = color
+    ellipse.attach_to(win)
+    win.render()
+    point.attach_to(win)
+    win.render()
 
 
     """

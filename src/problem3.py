@@ -45,12 +45,17 @@ def run_test_problem3():
 def problem3(point, length, delta, window):
     point.attach_to(window)
     window.render()
-    l = length
-    line = rg.Line(point, l)
-    line.thickness = 3
-    line.color = 'black'
-    line.attach_to(window)
+    line1 = rg.Line(point, length)
+    line1.thickness = 3
+    line1.color = 'black'
+    line1.attach_to(window)
     window.render()
+    for k in range (4):
+        line = rg.Line(point, line+20)
+        line.attach_to(window)
+
+
+
 
 
     """
