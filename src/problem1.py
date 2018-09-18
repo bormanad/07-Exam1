@@ -2,8 +2,8 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Drew Borman.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -58,6 +58,18 @@ def run_test_problem1a():
 
 
 def problem1a(rectangle, square, thickness, window):
+    rectangle.attach_to(window)
+    square.attach_to(window)
+    window.render()
+    w = rectangle.get_width()
+    line = rg.Line(square.center, rectangle.get_upper_right_corner())
+    line.thickness = thickness
+    line.attach_to(window)
+    window.render()
+
+
+
+
     """
     See   problem1a_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -123,6 +135,14 @@ def run_test_problem1b():
 
 
 def problem1b(point, win, width, height, color):
+    rg.RoseWindow = win
+
+
+
+
+
+
+
     """
     See   problem1b_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
